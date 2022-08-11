@@ -1,0 +1,24 @@
+{
+  "name": "music-recorder",
+  "version": "1.0.0",
+  "description": "Recorder for Music",
+  "main": "app.js",
+  "author": "Marvin Bruns",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "build": "rimraf dist && npx tsc && npx copyfiles -u 1 -e **/*.ts src/**/*  dist && npx copyfiles package.json dist",
+    "start": "npm run build && electron dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "package-win": "npm run build && npx electron-packager dist --overwrite --asar --platform=win32 --arch=x64 --icon=src/assets/icon/icon.ico --out=release-builds",
+    "package-linux": "npm run build && npx electron-packager dist --overwrite --asar --platform=linux --arch=x64 --icon=src/assets/icon/icon.png --out=release-builds",
+    "package-ios": "npm run build && npx electron-packager dist --overwrite --asar --platform=darwin --arch=x64 --icon=src/assets/icon/icon.png --out=release-builds",
+    "package": "rimraf release-builds && npm run package-win && npm run package-linux && npm run package-ios"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "electron": "^20.0.2",
+    "electron-packager": "^15.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
