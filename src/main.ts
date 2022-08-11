@@ -34,7 +34,7 @@ export default class Main {
     Main.initData.load();
 
     Main.mainWindow = new Main.BrowserWindow({
-      title: 'Amazon Music Recorder',
+      title: 'Music Recorder',
       icon: path.join(__dirname, 'assets/icon/icon.png'),
       width: Main.initData.data?.window?.width ?? 800,
       height: Main.initData.data?.window?.height ?? 600,
