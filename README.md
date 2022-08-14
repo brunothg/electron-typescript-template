@@ -1,4 +1,4 @@
-# Amazon Music Recorder
+# Electron Typescript Template
 Recorder for Amazon Music
 
 ## References
