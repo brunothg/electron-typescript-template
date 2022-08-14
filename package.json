@@ -1,7 +1,7 @@
 {
-  "name": "music-recorder",
+  "name": "electron-typescript-template",
   "version": "1.0.0",
-  "description": "Recorder for Music",
+  "description": "Template for electron with typescript",
   "main": "app.js",
   "author": "Marvin Bruns",
   "license": "AGPL-3.0-or-later",
